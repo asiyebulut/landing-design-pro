@@ -53,11 +53,13 @@ body {
     border: 1px solid lightgrey;
     border-radius: 4px;
 }
- 
+  /* I COULD NOT SET INPUT[EMAIL] AND 
+    BUTTON1'S WIDTH 100%. 
+    INPUT DOES NOT STAY IN ITS PARENT ELEMENT, WHY? */
 .section-a-e input[type="email"]::placeholder{
     font-size: large;
 }
-.section-a-e .button1 {
+.section-a-e .button1 {        
     display: block;
     width: 80%;
     padding: 10px;
@@ -164,12 +166,11 @@ body {
     }
 
     #section-b{
-        
+        display: flex;
+        justify-content: space-between;
     }
     #section-b .box{
-        float: left;
-        width: 30%;
-        margin: 10% 1.6%;
+        flex: 1 0 33%;
     }
     
     #section-c .content{
@@ -188,7 +189,7 @@ body {
 
     .future .content, .future .bg-img1,
     .future .bg-img2, .future .bg-img3{
-        flex: 0 0 50%;
+        flex: 1 0 50%;
         max-width: 50%;
     }
 
@@ -202,5 +203,26 @@ body {
     }
 
     
+    #testimonials{
+        display: flex;
+        justify-content: space-between;
+    }
+    .testimonial{
+        flex: 1 0 33%;
+    }
 
+    #footer{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    footer .link{
+        flex: 1 0 50%;
+        text-align: start;
+    }
+
+    #footer .social{
+        flex: 1 0 60%;
+        text-align: end;
+    }
 }
